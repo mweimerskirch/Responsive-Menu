@@ -55,7 +55,7 @@
 	
 	//function to check if URL is unique
 	function isUrlUnique(url){
-		return ($.inArray(url, uniqueLinks) === -1) ? true : false;
+		return (url == '' || url == '#' || typeof url == 'undefined' || $.inArray(url, uniqueLinks) === -1) ? true : false;
 	}
 	
 	
