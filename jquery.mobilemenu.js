@@ -148,7 +148,8 @@
 		var $optgroup = $('<optgroup label="'+$.trim(getText($group))+'" />');
 		
 		//append top option to it (current list item's text)
-		createOption($group,$optgroup, settings.groupPageText);
+		if($group.find('a:first').attr('href'))
+			createOption($group,$optgroup, settings.groupPageText);
 	
 		//loop through each sub-nav list
 		$group.children('ul, ol').each(function(){
